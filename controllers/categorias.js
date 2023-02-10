@@ -4,13 +4,10 @@ var bcrypt = require('bcryptjs');
 const Categorias = require('../models/categorias');
 
 const getCategorias = async(req = request, res = response) => {
-    //Condiciones del get
-
 
     const listaCategoria = await Promise.all([
         Categorias.countDocuments(),
         Categorias.find()
-
     ]);
 
     res.json ({
@@ -20,9 +17,9 @@ const getCategorias = async(req = request, res = response) => {
 }
 
 const postCategoria = async(req = request, res = response) => {
-    //nombre, correo, password y role
-    const {nombreCateogira,  pasillo, estado} = req.body;
-    const categoriaGuardadoDB = new Categorias({nombreCateogira, pasillo, estado});
+    const {nombreCategoria,  pasillo, estado} = req.body;
+    const categoriaGuardadoDB = new Categorias({nombreCategoria, pasillo, estado});
+    
     
 
     //Guardar en DB
