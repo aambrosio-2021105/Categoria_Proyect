@@ -1,8 +1,5 @@
 //Importaciones 
-const{getCategorias} = require('../controllers/categorias');
-const{postCategoria} = require('../controllers/categorias');
-const{putCategorias} = require('../controllers/categorias');
-const{deleteCategoria} = require('../controllers/categorias');
+const{getCategorias,postCategoria,putCategorias,deleteCategoria} = require('../controllers/categorias');
 
 const {Router} = require('express');
 
