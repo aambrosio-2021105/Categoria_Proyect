@@ -5,15 +5,12 @@ const Categorias = require('../models/categorias');
 
 const getCategorias = async(req = request, res = response) => {
     //Condiciones del get
-    const {limite, desde} = req.query;
-    const query = {estado: true};
+
 
     const listaCategoria = await Promise.all([
-        Categorias.countDocuments(query),
-        Categorias.find(query)
-                //.skip(Number(desde))
-                //.limit(Number(limite))
-                //condiciones como limit y eso
+        Categorias.countDocuments(),
+        Categorias.find()
+
     ]);
 
     res.json ({
