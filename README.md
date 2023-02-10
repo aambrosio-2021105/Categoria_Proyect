@@ -12,3 +12,9 @@ localhost:3000/api/categorias/mostrar.
 localhost:3000/api/categorias/agregar.
 localhost:3000/api/categorias/editar/id.
 localhost:3000/api/categorias/eliminar/id.
+{
+    "nombreCategoria":"amigas",
+    "pasillo":3,
+    "estado":true
+
+}
