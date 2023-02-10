@@ -41,7 +41,7 @@ const putCategorias = async(req = request, res = response) => {
     //Obtenemos info de la ruta
     const {id} = req.params;
     //Especificamos lo que no queremos que cambie, lo que no esta se cambia
-    const {_id,nombreCateogira,...resto} = req.body;
+    const {_id,...resto} = req.body;
     
     
     //Editar al usuario por el id
